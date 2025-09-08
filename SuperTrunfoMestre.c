@@ -72,15 +72,15 @@ com duas variações , cada uma será associada a uma carta*/
 
         //cálculo da primeira carta
         denPopulacional1 =(float)Populacao1 / Area1;
-        pibCapita1 =(float)Pib1 / Populacao1;
+        pibCapita1 =Pib1 / (float)Populacao1;
 
         //cálculo da segunda carta
         denPopulacional2 =(float)Populacao2 / Area2;
-        pibCapita2 =(float)Pib2 / Populacao2;
+        pibCapita2 =Pib2 /(float) Populacao2;
 
         //Calculando o super poder de cada carta , sendo primeiro da  primeira carta  e depois a segunda carta 
-        superPoder1 = (float)Populacao1 + Area1 + Pib1 + pontoTuristico1 + pibCapita1 + (1/denPopulacional1);    
-        superPoder2 = (float)Populacao2 + Area2 + Pib2 + pontoTuristico2 + pibCapita2 + (1/denPopulacional2);
+        superPoder1 = (float)Populacao1 + Area1 + Pib1 + (float)pontoTuristico1 + pibCapita1 + (1/denPopulacional1);    
+        superPoder2 = (float)Populacao2 + Area2 + Pib2 + (float)pontoTuristico2 + pibCapita2 + (1/denPopulacional2);
 
         //Comparando os valores dos atributos e poderes
         resultadoPopulacao = Populacao1 > Populacao2;
