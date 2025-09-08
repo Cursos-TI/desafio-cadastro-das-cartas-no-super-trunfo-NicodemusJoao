@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Nível aventureiro
+
 int main(){
 /* declaração das variáveis com a estrutura (Tipo , nome da variável), 
 com duas variações , cada uma será associada a uma carta*/
@@ -8,8 +10,9 @@ com duas variações , cada uma será associada a uma carta*/
     char codCarta1[3], codCarta2[3];
     char Nome1[30], Nome2[30];
     int Populacao1, Populacao2;
-    float Area1, Area2;
-    float Pib1, Pib2;
+    float Area1, Area2, Pib1, Pib2;
+    //duas variaveis para resultado, respectivamente ( Densidade Populacional e PIB per Capita)
+    float denPopulacional1, pibCapita1, denPopulacional2, pibCapita2; 
     int pontoTuristico1, pontoTuristico2;
 
 
@@ -38,6 +41,7 @@ com duas variações , cada uma será associada a uma carta*/
         printf("Informe quantos pontos turísticos existem na cidade: ");
         scanf("%d", &pontoTuristico1);
 
+
     /*leitura de dados da segunda carta, seguindo a mesma observação da primeira leitura de dados, 
     mas utilizando as variaveis para a segunda carta*/
         printf("\nPerfeito!, Agora insira os dados da segunda carta.\n"); 
@@ -54,12 +58,26 @@ com duas variações , cada uma será associada a uma carta*/
         printf("Informe o PIB (Produto Interno Bruto) de sua cidade: ");
         scanf("%f", &Pib2);
         printf("Informe quantos pontos turísticos existem na cidade: ");
-        scanf("%d", &pontoTuristico2);   
+        scanf("%d", &pontoTuristico2);  
+        
+        /*Após a leitura dos dados , iremos calcular a densidade populacional e o pib per capita segundo os 
+        dados lidos, e seguindo as seguintes formulas : 
+        - denPopulacional = populaçao / area , 
+        - pib per capita = PIb / populacao*/
 
-    /*Finalizado a entrada de dados pelo usuário, agora iremos demonstrar as cartas cadastradas,
-    e na saída de dados , no printf() deveremos utilizar os mesmos especificadores utilizados no scanf()
-    de leitura, porém aqui, a estrutura se diferencia pois estará no meio do texto que o usuário lerá, seguido 
-    da declaração da variável, no printf() nao será necessário o uso do &.  */  
+
+        //cálculo da primeira carta
+        denPopulacional1 =(float)Populacao1 / Area1;
+        pibCapita1 =Pib1 /(float)Populacao1;
+
+        //cálculo da segunda carta
+        denPopulacional2 =(float)Populacao2 / Area2;
+        pibCapita2 =Pib2 /(float)Populacao2;
+
+    /*Finalizado a entrada de dados pelo usuário e o cálculo de Densidade e Pib per capita, agora iremos 
+    demonstrar as cartas cadastradas, e na saída de dados , no printf() deveremos utilizar os mesmos especificadores
+     utilizados no scanf() de leitura, porém aqui, a estrutura se diferencia pois estará no meio do texto que o usuário lerá, 
+     seguido da declaração da variável, no printf() nao será necessário o uso do &.  */  
     
          printf("Chegamos ao fim do cadastro das cartas!, confira os dados informados: \n"
                 "\n------------------------ Cartas Cadastradas -------------------------- \n");  
@@ -73,6 +91,8 @@ com duas variações , cada uma será associada a uma carta*/
          printf("Área: %.2f Km²\n",Area1);
          printf("PIB: %.2f Bilhões de reais\n", Pib1);
          printf("Número de Pontos Turísticos: %d\n", pontoTuristico1 );
+         printf("Densidade Populacional: %.2f hab/km²\n", denPopulacional1);
+         printf("PIB per Capita: %.2f reais\n", pibCapita1);
 
          //Impressão dos dados da segunda carta
          printf("\nCarta 2: \n");
@@ -82,10 +102,10 @@ com duas variações , cada uma será associada a uma carta*/
          printf("População: %d\n", Populacao2);
          printf("Área: %.2f km²\n",Area2);
          printf("PIB: %.2f Bilhões de reais\n", Pib2);
-         printf("Número de Pontos Turísticos: %d\n", pontoTuristico2 );  
+         printf("Número de Pontos Turísticos: %d\n", pontoTuristico2);
+         printf("Densidade Populacional: %.2f hab/km²\n", denPopulacional2);
+         printf("PIB per Capita: %.2f reais\n", pibCapita2);  
             
-
-
 
     return 0;
 }
