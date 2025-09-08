@@ -68,11 +68,11 @@ com duas variações , cada uma será associada a uma carta*/
 
         //cálculo da primeira carta
         denPopulacional1 =(float)Populacao1 / Area1;
-        pibCapita1 =(float)Pib1 / Populacao1;
+        pibCapita1 =Pib1 /(float)Populacao1;
 
         //cálculo da segunda carta
         denPopulacional2 =(float)Populacao2 / Area2;
-        pibCapita2 =(float)Pib2 / Populacao2;
+        pibCapita2 =Pib2 /(float)Populacao2;
 
     /*Finalizado a entrada de dados pelo usuário e o cálculo de Densidade e Pib per capita, agora iremos 
     demonstrar as cartas cadastradas, e na saída de dados , no printf() deveremos utilizar os mesmos especificadores
