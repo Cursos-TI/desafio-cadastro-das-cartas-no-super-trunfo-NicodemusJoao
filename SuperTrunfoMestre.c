@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//nível mestre
+
 int main(){
 /* declaração das variáveis com a estrutura (Tipo , nome da variável), 
 com duas variações , cada uma será associada a uma carta*/
